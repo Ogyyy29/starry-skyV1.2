@@ -1,0 +1,312 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+.starry-background img {
+  width:calc(100% + 40px);
+  height: calc(100% + 40px);
+  object-fit: cover; /* Изображение будет масштабироваться, чтобы заполнить свой контейнер */
+  margin: -40px;
+  animation: pulse 10s infinite alternate; /* Анимация пульсации фона */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05); /* Немного увеличиваем масштаб для эффекта пульсации */
+  }
+}
+
+.content {
+  position: absolute;
+  color: rgb(26, 79, 154);
+  padding-top: 20%;
+  font-size: 2em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+.content h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Добавляем тень для текста заголовка */
+}
+
+.content p {
+  font-size: 1.5em;
+  color: rgba(255, 255, 255, 0.8); /* Сделаем текст контента менее ярким */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Добавляем тень для текста контента */
+}
+
+.planet {
+margin-top: 130px;
+opacity: 0; /* Изначально скрываем планету */
+transition: opacity 0.5s ease;
+}
+
+.planet.show {
+  opacity: 1; /* Показываем планету */
+}
+
+.planet-2 {
+  opacity: 0; /* Изначально скрываем планету */
+  transition: opacity 0.5s ease;
+  }
+
+  .content-2 {
+    height: 115px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.8); /* Сделаем текст контента менее ярким */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Добавляем тень для текста контента */
+    color: white;
+    font-size: 3em;
+    text-align: center;
+  }
+
+  .planet-3 {
+    opacity: 0; /* Изначально скрываем планету */
+    transition: opacity 0.5s ease;
+    }
+  
+    .content-3 {
+      height: 115px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: rgba(255, 255, 255, 0.8); /* Сделаем текст контента менее ярким */
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Добавляем тень для текста контента */
+      color: white;
+      font-size: 3em;
+      text-align: center;
+    }
+
+    .planet-4 {
+      opacity: 0; /* Изначально скрываем планету */
+      transition: opacity 0.5s ease;
+      }
+    
+      .content-4 {
+        height: 115px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgba(255, 255, 255, 0.8); /* Сделаем текст контента менее ярким */
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Добавляем тень для текста контента */
+        color: white;
+        font-size: 3em;
+        text-align: center;
+      }
+
+  body.night-mode {
+    filter: brightness(0.5) contrast(1.5); /* Эти значения можно настроить по вашему желанию для создания эффекта ночного фона */
+    background-color: rgb(26, 29, 31);
+  }
+
+  button#toggleBackground {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+  }
+  
+
+  button#InterestingFacts{
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+  }
+
+  div#factDisplay{
+    position: absolute;
+    top: 150px;
+    right: 20px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 340px;
+    color: rgb(124, 173, 242);
+  }
+
+ .add-effects{
+  width: 0;
+  height: 0;
+ }
+
+ button#effects{
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  top: 20px;
+  left: 20px;
+  border-radius: 10px;
+  font-size: 14px;
+ }
+
+button#toggleBackground:hover{
+  background-color: rgb(211, 215, 220);
+}
+
+button#effects:hover{
+  background-color: rgb(211, 215, 220);
+}
+
+button#InterestingFacts:hover{
+  background-color: rgb(211, 215, 220);
+}
+
+.effects-menu {
+  position: absolute;
+  top: 70px; /* Отступ от верхней границы */
+  left: 20px; /* Отступ от левой границы */
+  display: none; /* Изначально скрываем меню */
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  padding: 10px;
+  width: 20%;
+  height: 20%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+
+.effect-option {
+  display: block;
+  width: 100%;
+  padding: 8px 0;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 14px;
+
+}
+
+.effect-option:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+button#effect1{
+height: 30px;
+}
+
+button#effect2{
+  height: 30px;
+}
+
+button#effect3{
+  height: 30px;
+}
+
+.notification {
+  position: fixed;
+  top: 10px;
+  left: 60%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  color: rgb(224, 199, 199);
+  border-radius: 5px;
+  opacity: 1;
+  transition: opacity 1s ease;
+  z-index: 9999;
+  width: 30%;
+  height: 10%;
+}
+
+/* Мерцание сайта */
+.sparkles {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+}
+
+.sparkle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #ffffff;
+  animation: sparkle-animation  infinite;
+  width: 1px;
+  height: 1px;
+}
+
+@keyframes sparkle-animation {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+
+.star {
+  position: absolute;
+  background: white;
+  width: 2px;
+  height: 2px;
+}
+
+.sky {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+}
+
